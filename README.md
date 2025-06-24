@@ -1,20 +1,15 @@
-# Qiyuan Liu's Personal Website
-Welcome to my personal website repository! This project marks my very first foray into web design, making it a truly meaningful milestone in my journey. I will be updating this site regularly to document my growth and share my progress.
+# Deprecated Version React Resume with Vercel
+The main reason for ultimately deciding to deprecate this version is that the webpage is flashy but impractical. The source code is overly bloated and entirely forked from React Resume, making it difficult for me to maintain and offering limited scalability.
 
-Feel free to explore the code, watch as the website evolves, and reach out if you'd like to connect. I'm always open to engaging with others who share an interest in robotics, web development, or anything in between!
+## Still Accessible Here : [deprecated version](https://qiyuan-personal-website.vercel.app/)
+Previously, it was deployed to Vercel, but Vercel was linked to this repo and kept trying to build my main branch. The build kept failing, which resulted in a prominent red X that I didn’t like. So I simply disconnected it from Vercel. I won’t be updating this deprecated version anyway. The current visible version is from March 2025.
 
-## Visit it here! : https://www.qiyuanliu.com/
-A personal website built to record my projects, educations, and experiences in robotics engineering and intelligent control. Explore my portfolio and get in touch for collaborations in the field of robotics and autonomous systems.
-
-## Installation & Setups
-Some preparations in advance, make sure you have [Node](https://nodejs.org/en/download/package-manager) and [Yarn](https://yarnpkg.com/getting-started/install) installed on your device. Remember to reconfigure your fnm environment.
+## Just in case it might be needed in the future
+Install [Node](https://nodejs.org/en/download/package-manager) and [Yarn](https://yarnpkg.com/getting-started/install). Reconfigure fnm environment as follows:
 ```bash
 fnm env --use-on-cd | Out-String | Invoke-Expression
 ```
-Clone the repository and direct to Imitation-main directory.
-```bash
-git clone https://github.com/iQiyuan/iQiyuan.github.io.git
-```
+
 Open your terminal and install all dependencies. After all dependencies installed, you can start to run your website on localhost.
 ```bash
 yarn install
@@ -24,21 +19,6 @@ yarn dev
 ## Deploy the Website
 It is recommended to first create a GitHub repository, then push the built web project to GitHub. After that, log in to [Vercel](https://vercel.com/) and follow their steps to complete the deployment. Once deployed, a Vercel URL will be generated, which can be used to access the corresponding website. If you want to use a custom domain, purchase the domain first, and then point its DNS to Vercel.
 
-## Update Logs
-
-### 2025.Jan.27
-Added one more project entitled "Autonomous Tennis Ball Fetcher". Fixed a typo in README.md. Added a button to download resume.
-
-### 2025.Jan.21
-Added "Task Allocation by Dynamic Voronoi Space Partitioning" project. Updated personal statement. Updated "About me" section. Changed descriptions in "Experince" & "Education" section.
-
-## Why not GitHub Pages?
-```bash
-> Image Optimization using the default loader is not compatible with export.
-
-Possible solutions:
-- Use next start to run a server, which includes the Image Optimization API.
-- Configure images.unoptimized = true in next.config.js to disable the Image Optimization API.
 
 Read more: https://nextjs.org/docs/messages/export-image-api
 ```
