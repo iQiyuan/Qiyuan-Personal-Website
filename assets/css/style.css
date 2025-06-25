@@ -4,7 +4,7 @@
 
 
 /**
- * copyright 2022 @codewithsadee
+ * copyright 2025 @Qiyuan Liu
  */
 
 
@@ -74,7 +74,7 @@
    */
 
   /* font-family */
-  --ff-poppins: 'Poppins', sans-serif;
+  --ff-name: 'DM Serif Text', serif;
 
   /* font-size */
   --fs-1: 24px;
@@ -153,7 +153,7 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-poppins); }
+html { font-family: var(--ff-name); }
 
 body { background: var(--smoky-black); }
 
@@ -723,12 +723,12 @@ main {
 
 
 /**
- * #clients 
+ * #tools 
  */
 
-.clients { margin-bottom: 15px; }
+.tools { margin-bottom: 15px; }
 
-.clients-list {
+.tools-list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -743,18 +743,18 @@ main {
   scroll-padding-inline: 25px;
 }
 
-.clients-item {
+.tools-item {
   min-width: 50%;
   scroll-snap-align: start;
 }
 
-.clients-item img {
+.tools-item img {
   width: 100%;
   filter: grayscale(1);
   transition: var(--transition-1);
 }
 
-.clients-item img:hover { filter: grayscale(0); }
+.tools-item img:hover { filter: grayscale(0); }
 
 
 
@@ -1239,7 +1239,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * client
    */
 
-  .clients-item { min-width: calc(33.33% - 10px); }
+  .tools-item { min-width: calc(33.33% - 10px); }
 
 
 
@@ -1471,16 +1471,16 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 35px;
   }
 
-  /* clients */
+  /* tools */
 
-  .clients-list {
+  .tools-list {
     gap: 50px;
     margin: 0 -30px;
     padding: 45px;
     scroll-padding-inline: 45px;
   }
 
-  .clients-item { min-width: calc(33.33% - 35px); }
+  .tools-item { min-width: calc(33.33% - 35px); }
 
 
 
@@ -1734,9 +1734,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .testimonials-item { min-width: calc(50% - 15px); }
 
-  /* clients */
+  /* tools */
 
-  .clients-item { min-width: calc(25% - 38px); }
+  .tools-item { min-width: calc(25% - 38px); }
 
 
 
