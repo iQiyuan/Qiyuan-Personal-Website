@@ -76,7 +76,7 @@
   --fs-1: 24px;
   --fs-2: 18px;
   --fs-3: 17px;
-  --fs-4: 16px;
+  --fs-9: 16px;
   --fs-5: 15px;
   --fs-6: 14px;
   --fs-7: 13px;
@@ -228,7 +228,7 @@ article.active {
 
 .h3 { font-size: var(--fs-2); }
 
-.h4 { font-size: var(--fs-4); }
+.h4 { font-size: var(--fs-9); }
 
 .h5 {
   font-size: var(--fs-7);
@@ -472,7 +472,7 @@ main {
 
 .navbar-link {
   color: var(--light-gray);
-  font-size: var(--fs-8);
+  font-size: var(--fs-9);
   padding: 20px 7px;
   transition: color var(--transition-1);
 }
@@ -1215,6 +1215,12 @@ main {
   transform: scale(1.05);
 }
 
+/* 禁止图片拖拽和选择 */
+.moments img {
+  pointer-events: none;
+  user-select: none;
+}
+
 
 
 
@@ -1376,7 +1382,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     --fs-1: 32px;
     --fs-2: 24px;
     --fs-3: 26px;
-    --fs-4: 18px;
+    --fs-9: 18px;
     --fs-6: 15px;
     --fs-7: 15px;
     --fs-8: 12px;
