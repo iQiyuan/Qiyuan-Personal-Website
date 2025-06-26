@@ -16,42 +16,42 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
 
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
+// // testimonials variables
+// const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+// const modalContainer = document.querySelector("[data-modal-container]");
+// const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+// const overlay = document.querySelector("[data-overlay]");
 
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
+// // modal variable
+// const modalImg = document.querySelector("[data-modal-img]");
+// const modalTitle = document.querySelector("[data-modal-title]");
+// const modalText = document.querySelector("[data-modal-text]");
 
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
+// // modal toggle function
+// const testimonialsModalFunc = function () {
+//   modalContainer.classList.toggle("active");
+//   overlay.classList.toggle("active");
+// }
 
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
+// // add click event to all modal items
+// for (let i = 0; i < testimonialsItem.length; i++) {
 
-  testimonialsItem[i].addEventListener("click", function () {
+//   testimonialsItem[i].addEventListener("click", function () {
 
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+//     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+//     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+//     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+//     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
-    testimonialsModalFunc();
+//     testimonialsModalFunc();
 
-  });
+//   });
 
-}
+// }
 
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+// // add click event to modal close button
+// modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+// overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
@@ -157,3 +157,29 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// moments carousel 
+document.querySelectorAll('[data-carousel]').forEach(carousel => {
+  const track = carousel.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  let currentIndex = 0;
+
+  const updateSlide = (index) => {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${slideWidth * index}px)`;
+    currentIndex = index;
+  };
+
+  carousel.querySelector('[data-carousel-btn="next"]').addEventListener('click', () => {
+    const nextIndex = (currentIndex + 1) % slides.length;
+    updateSlide(nextIndex);
+  });
+
+  carousel.querySelector('[data-carousel-btn="prev"]').addEventListener('click', () => {
+    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlide(prevIndex);
+  });
+
+  // Initialize position
+  updateSlide(0);
+});
