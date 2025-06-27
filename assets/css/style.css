@@ -305,6 +305,22 @@ main {
 
 
 
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+.site-footer {
+  text-align: center;
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  padding: 20px 0 100px;
+  margin-top: -50px;
+  /* background: var(--eerie-black-2); */
+}
+
+
+
+
 
 /*-----------------------------------*\
   #SIDEBAR
