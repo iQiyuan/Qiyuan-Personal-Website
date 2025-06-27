@@ -7,6 +7,7 @@ This website documents my learning journey in front-end development and serves a
 ## Useful Resources
 
 **It’s best to keep any uploaded file under 50MB in size.**
+After converting my video to a GIF, the resulting file was extremely large. I eventually solved the issue using a mobile app called Wink.
 
 **[Streamline](https://home.streamlinehq.com/) - Icon Library**  
 If you're looking for icons, the website kkk has almost every kind of icon you could need. Each icon is customizable in terms of line thickness and color — it's incredibly useful.
